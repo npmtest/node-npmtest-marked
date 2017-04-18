@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-marked/marked/lib/marked.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-marked/node_modules/marked/lib/marked.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,9 +190,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-marked">npmtest-marked (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-marked">npmtest-marked (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-marked/marked/lib/marked.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-marked/node_modules/marked/lib/marked.js</span></h1>
     <h2>
         
         Statements: <span class="metric">20.29% <small>(99 / 488)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-marked/marked/lib/</a> &#187; marked.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-marked/node_modules/marked/lib/</a> » marked.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -2889,17 +2887,17 @@ block.tables = merge({}, block.gfm, {
  * Block Lexer
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Lexer(options) {</span>
-<span class="cstat-no" title="statement not covered" >  this.tokens = [];</span>
-<span class="cstat-no" title="statement not covered" >  this.tokens.links = {};</span>
-<span class="cstat-no" title="statement not covered" >  this.options = options || marked.defaults;</span>
-<span class="cstat-no" title="statement not covered" >  this.rules = block.normal;</span>
+<span class="fstat-no" title="function not covered">function Lexer(options) {</span>
+<span class="cstat-no" title="statement not covered">  this.tokens = [];</span>
+<span class="cstat-no" title="statement not covered">  this.tokens.links = {};</span>
+<span class="cstat-no" title="statement not covered">  this.options = options || marked.defaults;</span>
+<span class="cstat-no" title="statement not covered">  this.rules = block.normal;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this.options.gfm) {</span>
-<span class="cstat-no" title="statement not covered" >    if (this.options.tables) {</span>
-<span class="cstat-no" title="statement not covered" >      this.rules = block.tables;</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.gfm) {</span>
+<span class="cstat-no" title="statement not covered">    if (this.options.tables) {</span>
+<span class="cstat-no" title="statement not covered">      this.rules = block.tables;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      this.rules = block.gfm;</span>
+<span class="cstat-no" title="statement not covered">      this.rules = block.gfm;</span>
     }
   }
 }
@@ -2914,31 +2912,31 @@ Lexer.rules = block;
  * Static Lex Method
  */
 &nbsp;
-Lexer.lex = <span class="fstat-no" title="function not covered" >function(src, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var lexer = new Lexer(options);</span>
-<span class="cstat-no" title="statement not covered" >  return lexer.lex(src);</span>
+Lexer.lex = <span class="fstat-no" title="function not covered">function(src, options) {</span>
+<span class="cstat-no" title="statement not covered">  var lexer = new Lexer(options);</span>
+<span class="cstat-no" title="statement not covered">  return lexer.lex(src);</span>
 };
 &nbsp;
 /**
  * Preprocessing
  */
 &nbsp;
-Lexer.prototype.lex = <span class="fstat-no" title="function not covered" >function(src) {</span>
-<span class="cstat-no" title="statement not covered" >  src = src</span>
+Lexer.prototype.lex = <span class="fstat-no" title="function not covered">function(src) {</span>
+<span class="cstat-no" title="statement not covered">  src = src</span>
     .replace(/\r\n|\r/g, '\n')
     .replace(/\t/g, '    ')
     .replace(/\u00a0/g, ' ')
     .replace(/\u2424/g, '\n');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return this.token(src, true);</span>
+<span class="cstat-no" title="statement not covered">  return this.token(src, true);</span>
 };
 &nbsp;
 /**
  * Lexing
  */
 &nbsp;
-Lexer.prototype.token = <span class="fstat-no" title="function not covered" >function(src, top, bq) {</span>
-<span class="cstat-no" title="statement not covered" >  var src = src.replace(/^ +$/gm, '')</span>
+Lexer.prototype.token = <span class="fstat-no" title="function not covered">function(src, top, bq) {</span>
+<span class="cstat-no" title="statement not covered">  var src = src.replace(/^ +$/gm, '')</span>
     , next
     , loose
     , cap
@@ -2949,204 +2947,204 @@ Lexer.prototype.token = <span class="fstat-no" title="function not covered" >fun
     , i
     , l;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  while (src) {</span>
+<span class="cstat-no" title="statement not covered">  while (src) {</span>
     // newline
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.newline.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      if (cap[0].length &gt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >        this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.newline.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      if (cap[0].length &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered">        this.tokens.push({</span>
           type: 'space'
         });
       }
     }
 &nbsp;
     // code
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.code.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      cap = cap[0].replace(/^ {4}/gm, '');</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.code.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      cap = cap[0].replace(/^ {4}/gm, '');</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'code',
         text: !this.options.pedantic
           ? cap.replace(/\n+$/, '')
           : cap
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // fences (gfm)
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.fences.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.fences.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'code',
         lang: cap[2],
         text: cap[3] || ''
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // heading
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.heading.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.heading.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'heading',
         depth: cap[1].length,
         text: cap[2]
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // table no leading pipe (gfm)
-<span class="cstat-no" title="statement not covered" >    if (top &amp;&amp; (cap = this.rules.nptable.exec(src))) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">    if (top &amp;&amp; (cap = this.rules.nptable.exec(src))) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      item = {</span>
+<span class="cstat-no" title="statement not covered">      item = {</span>
         type: 'table',
         header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
         align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
         cells: cap[3].replace(/\n$/, '').split('\n')
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; item.align.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        if (/^ *-+: *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'right';</span>
-        } else <span class="cstat-no" title="statement not covered" >if (/^ *:-+: *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'center';</span>
-        } else <span class="cstat-no" title="statement not covered" >if (/^ *:-+ *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'left';</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; item.align.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        if (/^ *-+: *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'right';</span>
+        } else <span class="cstat-no" title="statement not covered">if (/^ *:-+: *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'center';</span>
+        } else <span class="cstat-no" title="statement not covered">if (/^ *:-+ *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'left';</span>
         } else {
-<span class="cstat-no" title="statement not covered" >          item.align[i] = null;</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = null;</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; item.cells.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        item.cells[i] = item.cells[i].split(/ *\| */);</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; item.cells.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        item.cells[i] = item.cells[i].split(/ *\| */);</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push(item);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push(item);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // lheading
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.lheading.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.lheading.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'heading',
         depth: cap[2] === '=' ? 1 : 2,
         text: cap[1]
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // hr
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.hr.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.hr.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'hr'
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // blockquote
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.blockquote.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.blockquote.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'blockquote_start'
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      cap = cap[0].replace(/^ *&gt; ?/gm, '');</span>
+<span class="cstat-no" title="statement not covered">      cap = cap[0].replace(/^ *&gt; ?/gm, '');</span>
 &nbsp;
       // Pass `top` to keep the current
       // "toplevel" state. This is exactly
       // how markdown.pl works.
-<span class="cstat-no" title="statement not covered" >      this.token(cap, top, true);</span>
+<span class="cstat-no" title="statement not covered">      this.token(cap, top, true);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'blockquote_end'
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // list
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.list.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      bull = cap[2];</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.list.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      bull = cap[2];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'list_start',
         ordered: bull.length &gt; 1
       });
 &nbsp;
       // Get each top-level item.
-<span class="cstat-no" title="statement not covered" >      cap = cap[0].match(this.rules.item);</span>
+<span class="cstat-no" title="statement not covered">      cap = cap[0].match(this.rules.item);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      next = false;</span>
-<span class="cstat-no" title="statement not covered" >      l = cap.length;</span>
-<span class="cstat-no" title="statement not covered" >      i = 0;</span>
+<span class="cstat-no" title="statement not covered">      next = false;</span>
+<span class="cstat-no" title="statement not covered">      l = cap.length;</span>
+<span class="cstat-no" title="statement not covered">      i = 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (; i &lt; l; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        item = cap[i];</span>
+<span class="cstat-no" title="statement not covered">      for (; i &lt; l; i++) {</span>
+<span class="cstat-no" title="statement not covered">        item = cap[i];</span>
 &nbsp;
         // Remove the list item's bullet
         // so it is seen as the next token.
-<span class="cstat-no" title="statement not covered" >        space = item.length;</span>
-<span class="cstat-no" title="statement not covered" >        item = item.replace(/^ *([*+-]|\d+\.) +/, '');</span>
+<span class="cstat-no" title="statement not covered">        space = item.length;</span>
+<span class="cstat-no" title="statement not covered">        item = item.replace(/^ *([*+-]|\d+\.) +/, '');</span>
 &nbsp;
         // Outdent whatever the
         // list item contains. Hacky.
-<span class="cstat-no" title="statement not covered" >        if (~item.indexOf('\n ')) {</span>
-<span class="cstat-no" title="statement not covered" >          space -= item.length;</span>
-<span class="cstat-no" title="statement not covered" >          item = !this.options.pedantic</span>
+<span class="cstat-no" title="statement not covered">        if (~item.indexOf('\n ')) {</span>
+<span class="cstat-no" title="statement not covered">          space -= item.length;</span>
+<span class="cstat-no" title="statement not covered">          item = !this.options.pedantic</span>
             ? item.replace(new RegExp('^ {1,' + space + '}', 'gm'), '')
             : item.replace(/^ {1,4}/gm, '');
         }
 &nbsp;
         // Determine whether the next list item belongs here.
         // Backpedal if it does not belong in this list.
-<span class="cstat-no" title="statement not covered" >        if (this.options.smartLists &amp;&amp; i !== l - 1) {</span>
-<span class="cstat-no" title="statement not covered" >          b = block.bullet.exec(cap[i + 1])[0];</span>
-<span class="cstat-no" title="statement not covered" >          if (bull !== b &amp;&amp; !(bull.length &gt; 1 &amp;&amp; b.length &gt; 1)) {</span>
-<span class="cstat-no" title="statement not covered" >            src = cap.slice(i + 1).join('\n') + src;</span>
-<span class="cstat-no" title="statement not covered" >            i = l - 1;</span>
+<span class="cstat-no" title="statement not covered">        if (this.options.smartLists &amp;&amp; i !== l - 1) {</span>
+<span class="cstat-no" title="statement not covered">          b = block.bullet.exec(cap[i + 1])[0];</span>
+<span class="cstat-no" title="statement not covered">          if (bull !== b &amp;&amp; !(bull.length &gt; 1 &amp;&amp; b.length &gt; 1)) {</span>
+<span class="cstat-no" title="statement not covered">            src = cap.slice(i + 1).join('\n') + src;</span>
+<span class="cstat-no" title="statement not covered">            i = l - 1;</span>
           }
         }
 &nbsp;
         // Determine whether item is loose or not.
         // Use: /(^|\n)(?! )[^\n]+\n\n(?!\s*$)/
         // for discount behavior.
-<span class="cstat-no" title="statement not covered" >        loose = next || /\n\n(?!\s*$)/.test(item);</span>
-<span class="cstat-no" title="statement not covered" >        if (i !== l - 1) {</span>
-<span class="cstat-no" title="statement not covered" >          next = item.charAt(item.length - 1) === '\n';</span>
-<span class="cstat-no" title="statement not covered" >          if (!loose) <span class="cstat-no" title="statement not covered" >loose = next;</span></span>
+<span class="cstat-no" title="statement not covered">        loose = next || /\n\n(?!\s*$)/.test(item);</span>
+<span class="cstat-no" title="statement not covered">        if (i !== l - 1) {</span>
+<span class="cstat-no" title="statement not covered">          next = item.charAt(item.length - 1) === '\n';</span>
+<span class="cstat-no" title="statement not covered">          if (!loose) <span class="cstat-no" title="statement not covered">loose = next;</span></span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">        this.tokens.push({</span>
           type: loose
             ? 'loose_item_start'
             : 'list_item_start'
         });
 &nbsp;
         // Recurse.
-<span class="cstat-no" title="statement not covered" >        this.token(item, false, bq);</span>
+<span class="cstat-no" title="statement not covered">        this.token(item, false, bq);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">        this.tokens.push({</span>
           type: 'list_item_end'
         });
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'list_end'
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // html
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.html.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.html.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: this.options.sanitize
           ? 'paragraph'
           : 'html',
@@ -3154,83 +3152,83 @@ Lexer.prototype.token = <span class="fstat-no" title="function not covered" >fun
           &amp;&amp; (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style'),
         text: cap[0]
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // def
-<span class="cstat-no" title="statement not covered" >    if ((!bq &amp;&amp; top) &amp;&amp; (cap = this.rules.def.exec(src))) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.links[cap[1].toLowerCase()] = {</span>
+<span class="cstat-no" title="statement not covered">    if ((!bq &amp;&amp; top) &amp;&amp; (cap = this.rules.def.exec(src))) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.links[cap[1].toLowerCase()] = {</span>
         href: cap[2],
         title: cap[3]
       };
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // table (gfm)
-<span class="cstat-no" title="statement not covered" >    if (top &amp;&amp; (cap = this.rules.table.exec(src))) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">    if (top &amp;&amp; (cap = this.rules.table.exec(src))) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      item = {</span>
+<span class="cstat-no" title="statement not covered">      item = {</span>
         type: 'table',
         header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
         align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
         cells: cap[3].replace(/(?: *\| *)?\n$/, '').split('\n')
       };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; item.align.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        if (/^ *-+: *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'right';</span>
-        } else <span class="cstat-no" title="statement not covered" >if (/^ *:-+: *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'center';</span>
-        } else <span class="cstat-no" title="statement not covered" >if (/^ *:-+ *$/.test(item.align[i])) {</span>
-<span class="cstat-no" title="statement not covered" >          item.align[i] = 'left';</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; item.align.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        if (/^ *-+: *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'right';</span>
+        } else <span class="cstat-no" title="statement not covered">if (/^ *:-+: *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'center';</span>
+        } else <span class="cstat-no" title="statement not covered">if (/^ *:-+ *$/.test(item.align[i])) {</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = 'left';</span>
         } else {
-<span class="cstat-no" title="statement not covered" >          item.align[i] = null;</span>
+<span class="cstat-no" title="statement not covered">          item.align[i] = null;</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; item.cells.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        item.cells[i] = item.cells[i]</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; item.cells.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        item.cells[i] = item.cells[i]</span>
           .replace(/^ *\| *| *\| *$/g, '')
           .split(/ *\| */);
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      this.tokens.push(item);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push(item);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // top-level paragraph
-<span class="cstat-no" title="statement not covered" >    if (top &amp;&amp; (cap = this.rules.paragraph.exec(src))) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">    if (top &amp;&amp; (cap = this.rules.paragraph.exec(src))) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'paragraph',
         text: cap[1].charAt(cap[1].length - 1) === '\n'
           ? cap[1].slice(0, -1)
           : cap[1]
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // text
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.text.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.text.exec(src)) {</span>
       // Top-level should never reach here.
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.tokens.push({</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.tokens.push({</span>
         type: 'text',
         text: cap[0]
       });
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (src) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new</span>
+<span class="cstat-no" title="statement not covered">    if (src) {</span>
+<span class="cstat-no" title="statement not covered">      throw new</span>
         Error('Infinite loop on byte: ' + src.charCodeAt(0));
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return this.tokens;</span>
+<span class="cstat-no" title="statement not covered">  return this.tokens;</span>
 };
 &nbsp;
 /**
@@ -3307,26 +3305,26 @@ inline.breaks = merge({}, inline.gfm, {
  * Inline Lexer &amp; Compiler
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function InlineLexer(links, options) {</span>
-<span class="cstat-no" title="statement not covered" >  this.options = options || marked.defaults;</span>
-<span class="cstat-no" title="statement not covered" >  this.links = links;</span>
-<span class="cstat-no" title="statement not covered" >  this.rules = inline.normal;</span>
-<span class="cstat-no" title="statement not covered" >  this.renderer = this.options.renderer || new Renderer;</span>
-<span class="cstat-no" title="statement not covered" >  this.renderer.options = this.options;</span>
+<span class="fstat-no" title="function not covered">function InlineLexer(links, options) {</span>
+<span class="cstat-no" title="statement not covered">  this.options = options || marked.defaults;</span>
+<span class="cstat-no" title="statement not covered">  this.links = links;</span>
+<span class="cstat-no" title="statement not covered">  this.rules = inline.normal;</span>
+<span class="cstat-no" title="statement not covered">  this.renderer = this.options.renderer || new Renderer;</span>
+<span class="cstat-no" title="statement not covered">  this.renderer.options = this.options;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!this.links) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new</span>
+<span class="cstat-no" title="statement not covered">  if (!this.links) {</span>
+<span class="cstat-no" title="statement not covered">    throw new</span>
       Error('Tokens array requires a `links` property.');
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this.options.gfm) {</span>
-<span class="cstat-no" title="statement not covered" >    if (this.options.breaks) {</span>
-<span class="cstat-no" title="statement not covered" >      this.rules = inline.breaks;</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.gfm) {</span>
+<span class="cstat-no" title="statement not covered">    if (this.options.breaks) {</span>
+<span class="cstat-no" title="statement not covered">      this.rules = inline.breaks;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      this.rules = inline.gfm;</span>
+<span class="cstat-no" title="statement not covered">      this.rules = inline.gfm;</span>
     }
-  } else <span class="cstat-no" title="statement not covered" >if (this.options.pedantic) {</span>
-<span class="cstat-no" title="statement not covered" >    this.rules = inline.pedantic;</span>
+  } else <span class="cstat-no" title="statement not covered">if (this.options.pedantic) {</span>
+<span class="cstat-no" title="statement not covered">    this.rules = inline.pedantic;</span>
   }
 }
 &nbsp;
@@ -3340,160 +3338,160 @@ InlineLexer.rules = inline;
  * Static Lexing/Compiling Method
  */
 &nbsp;
-InlineLexer.output = <span class="fstat-no" title="function not covered" >function(src, links, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var inline = new InlineLexer(links, options);</span>
-<span class="cstat-no" title="statement not covered" >  return inline.output(src);</span>
+InlineLexer.output = <span class="fstat-no" title="function not covered">function(src, links, options) {</span>
+<span class="cstat-no" title="statement not covered">  var inline = new InlineLexer(links, options);</span>
+<span class="cstat-no" title="statement not covered">  return inline.output(src);</span>
 };
 &nbsp;
 /**
  * Lexing/Compiling
  */
 &nbsp;
-InlineLexer.prototype.output = <span class="fstat-no" title="function not covered" >function(src) {</span>
-<span class="cstat-no" title="statement not covered" >  var out = ''</span>
+InlineLexer.prototype.output = <span class="fstat-no" title="function not covered">function(src) {</span>
+<span class="cstat-no" title="statement not covered">  var out = ''</span>
     , link
     , text
     , href
     , cap;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  while (src) {</span>
+<span class="cstat-no" title="statement not covered">  while (src) {</span>
     // escape
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.escape.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += cap[1];</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.escape.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += cap[1];</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // autolink
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.autolink.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      if (cap[2] === '@') {</span>
-<span class="cstat-no" title="statement not covered" >        text = cap[1].charAt(6) === ':'</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.autolink.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      if (cap[2] === '@') {</span>
+<span class="cstat-no" title="statement not covered">        text = cap[1].charAt(6) === ':'</span>
           ? this.mangle(cap[1].substring(7))
           : this.mangle(cap[1]);
-<span class="cstat-no" title="statement not covered" >        href = this.mangle('mailto:') + text;</span>
+<span class="cstat-no" title="statement not covered">        href = this.mangle('mailto:') + text;</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        text = escape(cap[1]);</span>
-<span class="cstat-no" title="statement not covered" >        href = text;</span>
+<span class="cstat-no" title="statement not covered">        text = escape(cap[1]);</span>
+<span class="cstat-no" title="statement not covered">        href = text;</span>
       }
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.link(href, null, text);</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.link(href, null, text);</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // url (gfm)
-<span class="cstat-no" title="statement not covered" >    if (!this.inLink &amp;&amp; (cap = this.rules.url.exec(src))) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      text = escape(cap[1]);</span>
-<span class="cstat-no" title="statement not covered" >      href = text;</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.link(href, null, text);</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (!this.inLink &amp;&amp; (cap = this.rules.url.exec(src))) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      text = escape(cap[1]);</span>
+<span class="cstat-no" title="statement not covered">      href = text;</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.link(href, null, text);</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // tag
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.tag.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      if (!this.inLink &amp;&amp; /^&lt;a /i.test(cap[0])) {</span>
-<span class="cstat-no" title="statement not covered" >        this.inLink = true;</span>
-      } else <span class="cstat-no" title="statement not covered" >if (this.inLink &amp;&amp; /^&lt;\/a&gt;/i.test(cap[0])) {</span>
-<span class="cstat-no" title="statement not covered" >        this.inLink = false;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.tag.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      if (!this.inLink &amp;&amp; /^&lt;a /i.test(cap[0])) {</span>
+<span class="cstat-no" title="statement not covered">        this.inLink = true;</span>
+      } else <span class="cstat-no" title="statement not covered">if (this.inLink &amp;&amp; /^&lt;\/a&gt;/i.test(cap[0])) {</span>
+<span class="cstat-no" title="statement not covered">        this.inLink = false;</span>
       }
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.options.sanitize</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.options.sanitize</span>
         ? this.options.sanitizer
           ? this.options.sanitizer(cap[0])
           : escape(cap[0])
         : cap[0]
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // link
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.link.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      this.inLink = true;</span>
-<span class="cstat-no" title="statement not covered" >      out += this.outputLink(cap, {</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.link.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      this.inLink = true;</span>
+<span class="cstat-no" title="statement not covered">      out += this.outputLink(cap, {</span>
         href: cap[2],
         title: cap[3]
       });
-<span class="cstat-no" title="statement not covered" >      this.inLink = false;</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      this.inLink = false;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // reflink, nolink
-<span class="cstat-no" title="statement not covered" >    if ((cap = this.rules.reflink.exec(src))</span>
+<span class="cstat-no" title="statement not covered">    if ((cap = this.rules.reflink.exec(src))</span>
         || (cap = this.rules.nolink.exec(src))) {
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      link = (cap[2] || cap[1]).replace(/\s+/g, ' ');</span>
-<span class="cstat-no" title="statement not covered" >      link = this.links[link.toLowerCase()];</span>
-<span class="cstat-no" title="statement not covered" >      if (!link || !link.href) {</span>
-<span class="cstat-no" title="statement not covered" >        out += cap[0].charAt(0);</span>
-<span class="cstat-no" title="statement not covered" >        src = cap[0].substring(1) + src;</span>
-<span class="cstat-no" title="statement not covered" >        continue;</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      link = (cap[2] || cap[1]).replace(/\s+/g, ' ');</span>
+<span class="cstat-no" title="statement not covered">      link = this.links[link.toLowerCase()];</span>
+<span class="cstat-no" title="statement not covered">      if (!link || !link.href) {</span>
+<span class="cstat-no" title="statement not covered">        out += cap[0].charAt(0);</span>
+<span class="cstat-no" title="statement not covered">        src = cap[0].substring(1) + src;</span>
+<span class="cstat-no" title="statement not covered">        continue;</span>
       }
-<span class="cstat-no" title="statement not covered" >      this.inLink = true;</span>
-<span class="cstat-no" title="statement not covered" >      out += this.outputLink(cap, link);</span>
-<span class="cstat-no" title="statement not covered" >      this.inLink = false;</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">      this.inLink = true;</span>
+<span class="cstat-no" title="statement not covered">      out += this.outputLink(cap, link);</span>
+<span class="cstat-no" title="statement not covered">      this.inLink = false;</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // strong
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.strong.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.strong(this.output(cap[2] || cap[1]));</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.strong.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.strong(this.output(cap[2] || cap[1]));</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // em
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.em.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.em(this.output(cap[2] || cap[1]));</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.em.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.em(this.output(cap[2] || cap[1]));</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // code
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.code.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.codespan(escape(cap[2], true));</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.code.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.codespan(escape(cap[2], true));</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // br
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.br.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.br();</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.br.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.br();</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // del (gfm)
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.del.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.del(this.output(cap[1]));</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.del.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.del(this.output(cap[1]));</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
     // text
-<span class="cstat-no" title="statement not covered" >    if (cap = this.rules.text.exec(src)) {</span>
-<span class="cstat-no" title="statement not covered" >      src = src.substring(cap[0].length);</span>
-<span class="cstat-no" title="statement not covered" >      out += this.renderer.text(escape(this.smartypants(cap[0])));</span>
-<span class="cstat-no" title="statement not covered" >      continue;</span>
+<span class="cstat-no" title="statement not covered">    if (cap = this.rules.text.exec(src)) {</span>
+<span class="cstat-no" title="statement not covered">      src = src.substring(cap[0].length);</span>
+<span class="cstat-no" title="statement not covered">      out += this.renderer.text(escape(this.smartypants(cap[0])));</span>
+<span class="cstat-no" title="statement not covered">      continue;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (src) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new</span>
+<span class="cstat-no" title="statement not covered">    if (src) {</span>
+<span class="cstat-no" title="statement not covered">      throw new</span>
         Error('Infinite loop on byte: ' + src.charCodeAt(0));
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+<span class="cstat-no" title="statement not covered">  return out;</span>
 };
 &nbsp;
 /**
  * Compile Link
  */
 &nbsp;
-InlineLexer.prototype.outputLink = <span class="fstat-no" title="function not covered" >function(cap, link) {</span>
-<span class="cstat-no" title="statement not covered" >  var href = escape(link.href)</span>
+InlineLexer.prototype.outputLink = <span class="fstat-no" title="function not covered">function(cap, link) {</span>
+<span class="cstat-no" title="statement not covered">  var href = escape(link.href)</span>
     , title = link.title ? escape(link.title) : null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return cap[0].charAt(0) !== '!'</span>
+<span class="cstat-no" title="statement not covered">  return cap[0].charAt(0) !== '!'</span>
     ? this.renderer.link(href, title, this.output(cap[1]))
     : this.renderer.image(href, title, escape(cap[1]));
 };
@@ -3502,9 +3500,9 @@ InlineLexer.prototype.outputLink = <span class="fstat-no" title="function not co
  * Smartypants Transformations
  */
 &nbsp;
-InlineLexer.prototype.smartypants = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!this.options.smartypants) <span class="cstat-no" title="statement not covered" >return text;</span></span>
-<span class="cstat-no" title="statement not covered" >  return text</span>
+InlineLexer.prototype.smartypants = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  if (!this.options.smartypants) <span class="cstat-no" title="statement not covered">return text;</span></span>
+<span class="cstat-no" title="statement not covered">  return text</span>
     // em-dashes
     .replace(/---/g, '\u2014')
     // en-dashes
@@ -3525,22 +3523,22 @@ InlineLexer.prototype.smartypants = <span class="fstat-no" title="function not c
  * Mangle Links
  */
 &nbsp;
-InlineLexer.prototype.mangle = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!this.options.mangle) <span class="cstat-no" title="statement not covered" >return text;</span></span>
-<span class="cstat-no" title="statement not covered" >  var out = ''</span>
+InlineLexer.prototype.mangle = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  if (!this.options.mangle) <span class="cstat-no" title="statement not covered">return text;</span></span>
+<span class="cstat-no" title="statement not covered">  var out = ''</span>
     , l = text.length
     , i = 0
     , ch;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (; i &lt; l; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    ch = text.charCodeAt(i);</span>
-<span class="cstat-no" title="statement not covered" >    if (Math.random() &gt; 0.5) {</span>
-<span class="cstat-no" title="statement not covered" >      ch = 'x' + ch.toString(16);</span>
+<span class="cstat-no" title="statement not covered">  for (; i &lt; l; i++) {</span>
+<span class="cstat-no" title="statement not covered">    ch = text.charCodeAt(i);</span>
+<span class="cstat-no" title="statement not covered">    if (Math.random() &gt; 0.5) {</span>
+<span class="cstat-no" title="statement not covered">      ch = 'x' + ch.toString(16);</span>
     }
-<span class="cstat-no" title="statement not covered" >    out += '&amp;#' + ch + ';';</span>
+<span class="cstat-no" title="statement not covered">    out += '&amp;#' + ch + ';';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+<span class="cstat-no" title="statement not covered">  return out;</span>
 };
 &nbsp;
 /**
@@ -3551,22 +3549,22 @@ function Renderer(options) {
   this.options = options || {};
 }
 &nbsp;
-Renderer.prototype.code = <span class="fstat-no" title="function not covered" >function(code, lang, escaped) {</span>
-<span class="cstat-no" title="statement not covered" >  if (this.options.highlight) {</span>
-<span class="cstat-no" title="statement not covered" >    var out = this.options.highlight(code, lang);</span>
-<span class="cstat-no" title="statement not covered" >    if (out != null &amp;&amp; out !== code) {</span>
-<span class="cstat-no" title="statement not covered" >      escaped = true;</span>
-<span class="cstat-no" title="statement not covered" >      code = out;</span>
+Renderer.prototype.code = <span class="fstat-no" title="function not covered">function(code, lang, escaped) {</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.highlight) {</span>
+<span class="cstat-no" title="statement not covered">    var out = this.options.highlight(code, lang);</span>
+<span class="cstat-no" title="statement not covered">    if (out != null &amp;&amp; out !== code) {</span>
+<span class="cstat-no" title="statement not covered">      escaped = true;</span>
+<span class="cstat-no" title="statement not covered">      code = out;</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!lang) {</span>
-<span class="cstat-no" title="statement not covered" >    return '&lt;pre&gt;&lt;code&gt;'</span>
+<span class="cstat-no" title="statement not covered">  if (!lang) {</span>
+<span class="cstat-no" title="statement not covered">    return '&lt;pre&gt;&lt;code&gt;'</span>
       + (escaped ? code : escape(code, true))
       + '\n&lt;/code&gt;&lt;/pre&gt;';
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return '&lt;pre&gt;&lt;code class="'</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;pre&gt;&lt;code class="'</span>
     + this.options.langPrefix
     + escape(lang, true)
     + '"&gt;'
@@ -3574,16 +3572,16 @@ Renderer.prototype.code = <span class="fstat-no" title="function not covered" >f
     + '\n&lt;/code&gt;&lt;/pre&gt;\n';
 };
 &nbsp;
-Renderer.prototype.blockquote = <span class="fstat-no" title="function not covered" >function(quote) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;blockquote&gt;\n' + quote + '&lt;/blockquote&gt;\n';</span>
+Renderer.prototype.blockquote = <span class="fstat-no" title="function not covered">function(quote) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;blockquote&gt;\n' + quote + '&lt;/blockquote&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.html = <span class="fstat-no" title="function not covered" >function(html) {</span>
-<span class="cstat-no" title="statement not covered" >  return html;</span>
+Renderer.prototype.html = <span class="fstat-no" title="function not covered">function(html) {</span>
+<span class="cstat-no" title="statement not covered">  return html;</span>
 };
 &nbsp;
-Renderer.prototype.heading = <span class="fstat-no" title="function not covered" >function(text, level, raw) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;h'</span>
+Renderer.prototype.heading = <span class="fstat-no" title="function not covered">function(text, level, raw) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;h'</span>
     + level
     + ' id="'
     + this.options.headerPrefix
@@ -3595,25 +3593,25 @@ Renderer.prototype.heading = <span class="fstat-no" title="function not covered"
     + '&gt;\n';
 };
 &nbsp;
-Renderer.prototype.hr = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.options.xhtml ? '&lt;hr/&gt;\n' : '&lt;hr&gt;\n';</span>
+Renderer.prototype.hr = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this.options.xhtml ? '&lt;hr/&gt;\n' : '&lt;hr&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.list = <span class="fstat-no" title="function not covered" >function(body, ordered) {</span>
-<span class="cstat-no" title="statement not covered" >  var type = ordered ? 'ol' : 'ul';</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;' + type + '&gt;\n' + body + '&lt;/' + type + '&gt;\n';</span>
+Renderer.prototype.list = <span class="fstat-no" title="function not covered">function(body, ordered) {</span>
+<span class="cstat-no" title="statement not covered">  var type = ordered ? 'ol' : 'ul';</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;' + type + '&gt;\n' + body + '&lt;/' + type + '&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.listitem = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;li&gt;' + text + '&lt;/li&gt;\n';</span>
+Renderer.prototype.listitem = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;li&gt;' + text + '&lt;/li&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.paragraph = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;p&gt;' + text + '&lt;/p&gt;\n';</span>
+Renderer.prototype.paragraph = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;p&gt;' + text + '&lt;/p&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.table = <span class="fstat-no" title="function not covered" >function(header, body) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;table&gt;\n'</span>
+Renderer.prototype.table = <span class="fstat-no" title="function not covered">function(header, body) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;table&gt;\n'</span>
     + '&lt;thead&gt;\n'
     + header
     + '&lt;/thead&gt;\n'
@@ -3623,166 +3621,166 @@ Renderer.prototype.table = <span class="fstat-no" title="function not covered" >
     + '&lt;/table&gt;\n';
 };
 &nbsp;
-Renderer.prototype.tablerow = <span class="fstat-no" title="function not covered" >function(content) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;tr&gt;\n' + content + '&lt;/tr&gt;\n';</span>
+Renderer.prototype.tablerow = <span class="fstat-no" title="function not covered">function(content) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;tr&gt;\n' + content + '&lt;/tr&gt;\n';</span>
 };
 &nbsp;
-Renderer.prototype.tablecell = <span class="fstat-no" title="function not covered" >function(content, flags) {</span>
-<span class="cstat-no" title="statement not covered" >  var type = flags.header ? 'th' : 'td';</span>
-<span class="cstat-no" title="statement not covered" >  var tag = flags.align</span>
+Renderer.prototype.tablecell = <span class="fstat-no" title="function not covered">function(content, flags) {</span>
+<span class="cstat-no" title="statement not covered">  var type = flags.header ? 'th' : 'td';</span>
+<span class="cstat-no" title="statement not covered">  var tag = flags.align</span>
     ? '&lt;' + type + ' style="text-align:' + flags.align + '"&gt;'
     : '&lt;' + type + '&gt;';
-<span class="cstat-no" title="statement not covered" >  return tag + content + '&lt;/' + type + '&gt;\n';</span>
+<span class="cstat-no" title="statement not covered">  return tag + content + '&lt;/' + type + '&gt;\n';</span>
 };
 &nbsp;
 // span level renderer
-Renderer.prototype.strong = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;strong&gt;' + text + '&lt;/strong&gt;';</span>
+Renderer.prototype.strong = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;strong&gt;' + text + '&lt;/strong&gt;';</span>
 };
 &nbsp;
-Renderer.prototype.em = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;em&gt;' + text + '&lt;/em&gt;';</span>
+Renderer.prototype.em = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;em&gt;' + text + '&lt;/em&gt;';</span>
 };
 &nbsp;
-Renderer.prototype.codespan = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;code&gt;' + text + '&lt;/code&gt;';</span>
+Renderer.prototype.codespan = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;code&gt;' + text + '&lt;/code&gt;';</span>
 };
 &nbsp;
-Renderer.prototype.br = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.options.xhtml ? '&lt;br/&gt;' : '&lt;br&gt;';</span>
+Renderer.prototype.br = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this.options.xhtml ? '&lt;br/&gt;' : '&lt;br&gt;';</span>
 };
 &nbsp;
-Renderer.prototype.del = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;del&gt;' + text + '&lt;/del&gt;';</span>
+Renderer.prototype.del = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;del&gt;' + text + '&lt;/del&gt;';</span>
 };
 &nbsp;
-Renderer.prototype.link = <span class="fstat-no" title="function not covered" >function(href, title, text) {</span>
-<span class="cstat-no" title="statement not covered" >  if (this.options.sanitize) {</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      var prot = decodeURIComponent(unescape(href))</span>
+Renderer.prototype.link = <span class="fstat-no" title="function not covered">function(href, title, text) {</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.sanitize) {</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      var prot = decodeURIComponent(unescape(href))</span>
         .replace(/[^\w:]/g, '')
         .toLowerCase();
     } catch (e) {
-<span class="cstat-no" title="statement not covered" >      return '';</span>
+<span class="cstat-no" title="statement not covered">      return '';</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (prot.indexOf('javascript:') === 0 || prot.indexOf('vbscript:') === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      return '';</span>
+<span class="cstat-no" title="statement not covered">    if (prot.indexOf('javascript:') === 0 || prot.indexOf('vbscript:') === 0) {</span>
+<span class="cstat-no" title="statement not covered">      return '';</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  var out = '&lt;a href="' + href + '"';</span>
-<span class="cstat-no" title="statement not covered" >  if (title) {</span>
-<span class="cstat-no" title="statement not covered" >    out += ' title="' + title + '"';</span>
+<span class="cstat-no" title="statement not covered">  var out = '&lt;a href="' + href + '"';</span>
+<span class="cstat-no" title="statement not covered">  if (title) {</span>
+<span class="cstat-no" title="statement not covered">    out += ' title="' + title + '"';</span>
   }
-<span class="cstat-no" title="statement not covered" >  out += '&gt;' + text + '&lt;/a&gt;';</span>
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+<span class="cstat-no" title="statement not covered">  out += '&gt;' + text + '&lt;/a&gt;';</span>
+<span class="cstat-no" title="statement not covered">  return out;</span>
 };
 &nbsp;
-Renderer.prototype.image = <span class="fstat-no" title="function not covered" >function(href, title, text) {</span>
-<span class="cstat-no" title="statement not covered" >  var out = '&lt;img src="' + href + '" alt="' + text + '"';</span>
-<span class="cstat-no" title="statement not covered" >  if (title) {</span>
-<span class="cstat-no" title="statement not covered" >    out += ' title="' + title + '"';</span>
+Renderer.prototype.image = <span class="fstat-no" title="function not covered">function(href, title, text) {</span>
+<span class="cstat-no" title="statement not covered">  var out = '&lt;img src="' + href + '" alt="' + text + '"';</span>
+<span class="cstat-no" title="statement not covered">  if (title) {</span>
+<span class="cstat-no" title="statement not covered">    out += ' title="' + title + '"';</span>
   }
-<span class="cstat-no" title="statement not covered" >  out += this.options.xhtml ? '/&gt;' : '&gt;';</span>
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+<span class="cstat-no" title="statement not covered">  out += this.options.xhtml ? '/&gt;' : '&gt;';</span>
+<span class="cstat-no" title="statement not covered">  return out;</span>
 };
 &nbsp;
-Renderer.prototype.text = <span class="fstat-no" title="function not covered" >function(text) {</span>
-<span class="cstat-no" title="statement not covered" >  return text;</span>
+Renderer.prototype.text = <span class="fstat-no" title="function not covered">function(text) {</span>
+<span class="cstat-no" title="statement not covered">  return text;</span>
 };
 &nbsp;
 /**
  * Parsing &amp; Compiling
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Parser(options) {</span>
-<span class="cstat-no" title="statement not covered" >  this.tokens = [];</span>
-<span class="cstat-no" title="statement not covered" >  this.token = null;</span>
-<span class="cstat-no" title="statement not covered" >  this.options = options || marked.defaults;</span>
-<span class="cstat-no" title="statement not covered" >  this.options.renderer = this.options.renderer || new Renderer;</span>
-<span class="cstat-no" title="statement not covered" >  this.renderer = this.options.renderer;</span>
-<span class="cstat-no" title="statement not covered" >  this.renderer.options = this.options;</span>
+<span class="fstat-no" title="function not covered">function Parser(options) {</span>
+<span class="cstat-no" title="statement not covered">  this.tokens = [];</span>
+<span class="cstat-no" title="statement not covered">  this.token = null;</span>
+<span class="cstat-no" title="statement not covered">  this.options = options || marked.defaults;</span>
+<span class="cstat-no" title="statement not covered">  this.options.renderer = this.options.renderer || new Renderer;</span>
+<span class="cstat-no" title="statement not covered">  this.renderer = this.options.renderer;</span>
+<span class="cstat-no" title="statement not covered">  this.renderer.options = this.options;</span>
 }
 &nbsp;
 /**
  * Static Parse Method
  */
 &nbsp;
-Parser.parse = <span class="fstat-no" title="function not covered" >function(src, options, renderer) {</span>
-<span class="cstat-no" title="statement not covered" >  var parser = new Parser(options, renderer);</span>
-<span class="cstat-no" title="statement not covered" >  return parser.parse(src);</span>
+Parser.parse = <span class="fstat-no" title="function not covered">function(src, options, renderer) {</span>
+<span class="cstat-no" title="statement not covered">  var parser = new Parser(options, renderer);</span>
+<span class="cstat-no" title="statement not covered">  return parser.parse(src);</span>
 };
 &nbsp;
 /**
  * Parse Loop
  */
 &nbsp;
-Parser.prototype.parse = <span class="fstat-no" title="function not covered" >function(src) {</span>
-<span class="cstat-no" title="statement not covered" >  this.inline = new InlineLexer(src.links, this.options, this.renderer);</span>
-<span class="cstat-no" title="statement not covered" >  this.tokens = src.reverse();</span>
+Parser.prototype.parse = <span class="fstat-no" title="function not covered">function(src) {</span>
+<span class="cstat-no" title="statement not covered">  this.inline = new InlineLexer(src.links, this.options, this.renderer);</span>
+<span class="cstat-no" title="statement not covered">  this.tokens = src.reverse();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var out = '';</span>
-<span class="cstat-no" title="statement not covered" >  while (this.next()) {</span>
-<span class="cstat-no" title="statement not covered" >    out += this.tok();</span>
+<span class="cstat-no" title="statement not covered">  var out = '';</span>
+<span class="cstat-no" title="statement not covered">  while (this.next()) {</span>
+<span class="cstat-no" title="statement not covered">    out += this.tok();</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+<span class="cstat-no" title="statement not covered">  return out;</span>
 };
 &nbsp;
 /**
  * Next Token
  */
 &nbsp;
-Parser.prototype.next = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.token = this.tokens.pop();</span>
+Parser.prototype.next = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this.token = this.tokens.pop();</span>
 };
 &nbsp;
 /**
  * Preview Next Token
  */
 &nbsp;
-Parser.prototype.peek = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.tokens[this.tokens.length - 1] || 0;</span>
+Parser.prototype.peek = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return this.tokens[this.tokens.length - 1] || 0;</span>
 };
 &nbsp;
 /**
  * Parse Text Tokens
  */
 &nbsp;
-Parser.prototype.parseText = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  var body = this.token.text;</span>
+Parser.prototype.parseText = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  var body = this.token.text;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  while (this.peek().type === 'text') {</span>
-<span class="cstat-no" title="statement not covered" >    body += '\n' + this.next().text;</span>
+<span class="cstat-no" title="statement not covered">  while (this.peek().type === 'text') {</span>
+<span class="cstat-no" title="statement not covered">    body += '\n' + this.next().text;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return this.inline.output(body);</span>
+<span class="cstat-no" title="statement not covered">  return this.inline.output(body);</span>
 };
 &nbsp;
 /**
  * Parse Current Token
  */
 &nbsp;
-Parser.prototype.tok = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  switch (this.token.type) {</span>
+Parser.prototype.tok = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  switch (this.token.type) {</span>
     case 'space': {
-<span class="cstat-no" title="statement not covered" >      return '';</span>
+<span class="cstat-no" title="statement not covered">      return '';</span>
     }
     case 'hr': {
-<span class="cstat-no" title="statement not covered" >      return this.renderer.hr();</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.hr();</span>
     }
     case 'heading': {
-<span class="cstat-no" title="statement not covered" >      return this.renderer.heading(</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.heading(</span>
         this.inline.output(this.token.text),
         this.token.depth,
         this.token.text);
     }
     case 'code': {
-<span class="cstat-no" title="statement not covered" >      return this.renderer.code(this.token.text,</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.code(this.token.text,</span>
         this.token.lang,
         this.token.escaped);
     }
     case 'table': {
-<span class="cstat-no" title="statement not covered" >      var header = ''</span>
+<span class="cstat-no" title="statement not covered">      var header = ''</span>
         , body = ''
         , i
         , row
@@ -3791,81 +3789,81 @@ Parser.prototype.tok = <span class="fstat-no" title="function not covered" >func
         , j;
 &nbsp;
       // header
-<span class="cstat-no" title="statement not covered" >      cell = '';</span>
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; this.token.header.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        flags = { header: true, align: this.token.align[i] };</span>
-<span class="cstat-no" title="statement not covered" >        cell += this.renderer.tablecell(</span>
+<span class="cstat-no" title="statement not covered">      cell = '';</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; this.token.header.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        flags = { header: true, align: this.token.align[i] };</span>
+<span class="cstat-no" title="statement not covered">        cell += this.renderer.tablecell(</span>
           this.inline.output(this.token.header[i]),
           { header: true, align: this.token.align[i] }
         );
       }
-<span class="cstat-no" title="statement not covered" >      header += this.renderer.tablerow(cell);</span>
+<span class="cstat-no" title="statement not covered">      header += this.renderer.tablerow(cell);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (i = 0; i &lt; this.token.cells.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        row = this.token.cells[i];</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0; i &lt; this.token.cells.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        row = this.token.cells[i];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        cell = '';</span>
-<span class="cstat-no" title="statement not covered" >        for (j = 0; j &lt; row.length; j++) {</span>
-<span class="cstat-no" title="statement not covered" >          cell += this.renderer.tablecell(</span>
+<span class="cstat-no" title="statement not covered">        cell = '';</span>
+<span class="cstat-no" title="statement not covered">        for (j = 0; j &lt; row.length; j++) {</span>
+<span class="cstat-no" title="statement not covered">          cell += this.renderer.tablecell(</span>
             this.inline.output(row[j]),
             { header: false, align: this.token.align[j] }
           );
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        body += this.renderer.tablerow(cell);</span>
+<span class="cstat-no" title="statement not covered">        body += this.renderer.tablerow(cell);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return this.renderer.table(header, body);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.table(header, body);</span>
     }
     case 'blockquote_start': {
-<span class="cstat-no" title="statement not covered" >      var body = '';</span>
+<span class="cstat-no" title="statement not covered">      var body = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      while (this.next().type !== 'blockquote_end') {</span>
-<span class="cstat-no" title="statement not covered" >        body += this.tok();</span>
+<span class="cstat-no" title="statement not covered">      while (this.next().type !== 'blockquote_end') {</span>
+<span class="cstat-no" title="statement not covered">        body += this.tok();</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return this.renderer.blockquote(body);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.blockquote(body);</span>
     }
     case 'list_start': {
-<span class="cstat-no" title="statement not covered" >      var body = ''</span>
+<span class="cstat-no" title="statement not covered">      var body = ''</span>
         , ordered = this.token.ordered;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      while (this.next().type !== 'list_end') {</span>
-<span class="cstat-no" title="statement not covered" >        body += this.tok();</span>
+<span class="cstat-no" title="statement not covered">      while (this.next().type !== 'list_end') {</span>
+<span class="cstat-no" title="statement not covered">        body += this.tok();</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return this.renderer.list(body, ordered);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.list(body, ordered);</span>
     }
     case 'list_item_start': {
-<span class="cstat-no" title="statement not covered" >      var body = '';</span>
+<span class="cstat-no" title="statement not covered">      var body = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      while (this.next().type !== 'list_item_end') {</span>
-<span class="cstat-no" title="statement not covered" >        body += this.token.type === 'text'</span>
+<span class="cstat-no" title="statement not covered">      while (this.next().type !== 'list_item_end') {</span>
+<span class="cstat-no" title="statement not covered">        body += this.token.type === 'text'</span>
           ? this.parseText()
           : this.tok();
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return this.renderer.listitem(body);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.listitem(body);</span>
     }
     case 'loose_item_start': {
-<span class="cstat-no" title="statement not covered" >      var body = '';</span>
+<span class="cstat-no" title="statement not covered">      var body = '';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      while (this.next().type !== 'list_item_end') {</span>
-<span class="cstat-no" title="statement not covered" >        body += this.tok();</span>
+<span class="cstat-no" title="statement not covered">      while (this.next().type !== 'list_item_end') {</span>
+<span class="cstat-no" title="statement not covered">        body += this.tok();</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return this.renderer.listitem(body);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.listitem(body);</span>
     }
     case 'html': {
-<span class="cstat-no" title="statement not covered" >      var html = !this.token.pre &amp;&amp; !this.options.pedantic</span>
+<span class="cstat-no" title="statement not covered">      var html = !this.token.pre &amp;&amp; !this.options.pedantic</span>
         ? this.inline.output(this.token.text)
         : this.token.text;
-<span class="cstat-no" title="statement not covered" >      return this.renderer.html(html);</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.html(html);</span>
     }
     case 'paragraph': {
-<span class="cstat-no" title="statement not covered" >      return this.renderer.paragraph(this.inline.output(this.token.text));</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.paragraph(this.inline.output(this.token.text));</span>
     }
     case 'text': {
-<span class="cstat-no" title="statement not covered" >      return this.renderer.paragraph(this.parseText());</span>
+<span class="cstat-no" title="statement not covered">      return this.renderer.paragraph(this.parseText());</span>
     }
   }
 };
@@ -3874,8 +3872,8 @@ Parser.prototype.tok = <span class="fstat-no" title="function not covered" >func
  * Helpers
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function escape(html, encode) {</span>
-<span class="cstat-no" title="statement not covered" >  return html</span>
+<span class="fstat-no" title="function not covered">function escape(html, encode) {</span>
+<span class="cstat-no" title="statement not covered">  return html</span>
     .replace(!encode ? /&amp;(?!#?\w+;)/g : /&amp;/g, '&amp;amp;')
     .replace(/&lt;/g, '&amp;lt;')
     .replace(/&gt;/g, '&amp;gt;')
@@ -3883,17 +3881,17 @@ Parser.prototype.tok = <span class="fstat-no" title="function not covered" >func
     .replace(/'/g, '&amp;#39;');
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function unescape(html) {</span>
+<span class="fstat-no" title="function not covered">function unescape(html) {</span>
 	// explicitly match decimal, hex, and named HTML entities 
-<span class="cstat-no" title="statement not covered" >  return html.replace(/&amp;(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/g, <span class="fstat-no" title="function not covered" >function(_, n) {</span></span>
-<span class="cstat-no" title="statement not covered" >    n = n.toLowerCase();</span>
-<span class="cstat-no" title="statement not covered" >    if (n === 'colon') <span class="cstat-no" title="statement not covered" >return ':';</span></span>
-<span class="cstat-no" title="statement not covered" >    if (n.charAt(0) === '#') {</span>
-<span class="cstat-no" title="statement not covered" >      return n.charAt(1) === 'x'</span>
+<span class="cstat-no" title="statement not covered">  return html.replace(/&amp;(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/g, <span class="fstat-no" title="function not covered">function(_, n) {</span></span>
+<span class="cstat-no" title="statement not covered">    n = n.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered">    if (n === 'colon') <span class="cstat-no" title="statement not covered">return ':';</span></span>
+<span class="cstat-no" title="statement not covered">    if (n.charAt(0) === '#') {</span>
+<span class="cstat-no" title="statement not covered">      return n.charAt(1) === 'x'</span>
         ? String.fromCharCode(parseInt(n.substring(2), 16))
         : String.fromCharCode(+n.substring(1));
     }
-<span class="cstat-no" title="statement not covered" >    return '';</span>
+<span class="cstat-no" title="statement not covered">    return '';</span>
   });
 }
 &nbsp;
@@ -3909,7 +3907,7 @@ function replace(regex, opt) {
   };
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function noop() {</span>}
+<span class="fstat-no" title="function not covered">function noop() {</span>}
 noop.exec = noop;
 &nbsp;
 function merge(obj) {
@@ -3920,7 +3918,7 @@ function merge(obj) {
   for (; i &lt; arguments.length; i++) {
     target = arguments[i];
     for (key in target) {
-      <span class="missing-if-branch" title="else path not taken" >E</span>if (Object.prototype.hasOwnProperty.call(target, key)) {
+      <span class="missing-if-branch" title="else path not taken">E</span>if (Object.prototype.hasOwnProperty.call(target, key)) {
         obj[key] = target[key];
       }
     }
@@ -3934,87 +3932,87 @@ function merge(obj) {
  * Marked
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function marked(src, opt, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  if (callback || typeof opt === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >    if (!callback) {</span>
-<span class="cstat-no" title="statement not covered" >      callback = opt;</span>
-<span class="cstat-no" title="statement not covered" >      opt = null;</span>
+<span class="fstat-no" title="function not covered">function marked(src, opt, callback) {</span>
+<span class="cstat-no" title="statement not covered">  if (callback || typeof opt === 'function') {</span>
+<span class="cstat-no" title="statement not covered">    if (!callback) {</span>
+<span class="cstat-no" title="statement not covered">      callback = opt;</span>
+<span class="cstat-no" title="statement not covered">      opt = null;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    opt = merge({}, marked.defaults, opt || {});</span>
+<span class="cstat-no" title="statement not covered">    opt = merge({}, marked.defaults, opt || {});</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var highlight = opt.highlight</span>
+<span class="cstat-no" title="statement not covered">    var highlight = opt.highlight</span>
       , tokens
       , pending
       , i = 0;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      tokens = Lexer.lex(src, opt)</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      tokens = Lexer.lex(src, opt)</span>
     } catch (e) {
-<span class="cstat-no" title="statement not covered" >      return callback(e);</span>
+<span class="cstat-no" title="statement not covered">      return callback(e);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    pending = tokens.length;</span>
+<span class="cstat-no" title="statement not covered">    pending = tokens.length;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var done = <span class="fstat-no" title="function not covered" >function(err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        opt.highlight = highlight;</span>
-<span class="cstat-no" title="statement not covered" >        return callback(err);</span>
+<span class="cstat-no" title="statement not covered">    var done = <span class="fstat-no" title="function not covered">function(err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        opt.highlight = highlight;</span>
+<span class="cstat-no" title="statement not covered">        return callback(err);</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var out;</span>
+<span class="cstat-no" title="statement not covered">      var out;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        out = Parser.parse(tokens, opt);</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        out = Parser.parse(tokens, opt);</span>
       } catch (e) {
-<span class="cstat-no" title="statement not covered" >        err = e;</span>
+<span class="cstat-no" title="statement not covered">        err = e;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      opt.highlight = highlight;</span>
+<span class="cstat-no" title="statement not covered">      opt.highlight = highlight;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return err</span>
+<span class="cstat-no" title="statement not covered">      return err</span>
         ? callback(err)
         : callback(null, out);
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!highlight || highlight.length &lt; 3) {</span>
-<span class="cstat-no" title="statement not covered" >      return done();</span>
+<span class="cstat-no" title="statement not covered">    if (!highlight || highlight.length &lt; 3) {</span>
+<span class="cstat-no" title="statement not covered">      return done();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    delete opt.highlight;</span>
+<span class="cstat-no" title="statement not covered">    delete opt.highlight;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!pending) <span class="cstat-no" title="statement not covered" >return done();</span></span>
+<span class="cstat-no" title="statement not covered">    if (!pending) <span class="cstat-no" title="statement not covered">return done();</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (; i &lt; tokens.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      (<span class="fstat-no" title="function not covered" >function(token) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (token.type !== 'code') {</span>
-<span class="cstat-no" title="statement not covered" >          return --pending || done();</span>
+<span class="cstat-no" title="statement not covered">    for (; i &lt; tokens.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      (<span class="fstat-no" title="function not covered">function(token) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (token.type !== 'code') {</span>
+<span class="cstat-no" title="statement not covered">          return --pending || done();</span>
         }
-<span class="cstat-no" title="statement not covered" >        return highlight(token.text, token.lang, <span class="fstat-no" title="function not covered" >function(err, code) {</span></span>
-<span class="cstat-no" title="statement not covered" >          if (err) <span class="cstat-no" title="statement not covered" >return done(err);</span></span>
-<span class="cstat-no" title="statement not covered" >          if (code == null || code === token.text) {</span>
-<span class="cstat-no" title="statement not covered" >            return --pending || done();</span>
+<span class="cstat-no" title="statement not covered">        return highlight(token.text, token.lang, <span class="fstat-no" title="function not covered">function(err, code) {</span></span>
+<span class="cstat-no" title="statement not covered">          if (err) <span class="cstat-no" title="statement not covered">return done(err);</span></span>
+<span class="cstat-no" title="statement not covered">          if (code == null || code === token.text) {</span>
+<span class="cstat-no" title="statement not covered">            return --pending || done();</span>
           }
-<span class="cstat-no" title="statement not covered" >          token.text = code;</span>
-<span class="cstat-no" title="statement not covered" >          token.escaped = true;</span>
-<span class="cstat-no" title="statement not covered" >          --pending || done();</span>
+<span class="cstat-no" title="statement not covered">          token.text = code;</span>
+<span class="cstat-no" title="statement not covered">          token.escaped = true;</span>
+<span class="cstat-no" title="statement not covered">          --pending || done();</span>
         });
       })(tokens[i]);
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return;</span>
+<span class="cstat-no" title="statement not covered">    return;</span>
   }
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    if (opt) <span class="cstat-no" title="statement not covered" >opt = merge({}, marked.defaults, opt);</span></span>
-<span class="cstat-no" title="statement not covered" >    return Parser.parse(Lexer.lex(src, opt), opt);</span>
+<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered">    if (opt) <span class="cstat-no" title="statement not covered">opt = merge({}, marked.defaults, opt);</span></span>
+<span class="cstat-no" title="statement not covered">    return Parser.parse(Lexer.lex(src, opt), opt);</span>
   } catch (e) {
-<span class="cstat-no" title="statement not covered" >    e.message += '\nPlease report this to https://github.com/chjj/marked.';</span>
-<span class="cstat-no" title="statement not covered" >    if ((opt || marked.defaults).silent) {</span>
-<span class="cstat-no" title="statement not covered" >      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'</span>
+<span class="cstat-no" title="statement not covered">    e.message += '\nPlease report this to https://github.com/chjj/marked.';</span>
+<span class="cstat-no" title="statement not covered">    if ((opt || marked.defaults).silent) {</span>
+<span class="cstat-no" title="statement not covered">      return '&lt;p&gt;An error occured:&lt;/p&gt;&lt;pre&gt;'</span>
         + escape(e.message + '', true)
         + '&lt;/pre&gt;';
     }
-<span class="cstat-no" title="statement not covered" >    throw e;</span>
+<span class="cstat-no" title="statement not covered">    throw e;</span>
   }
 }
 &nbsp;
@@ -4023,9 +4021,9 @@ function merge(obj) {
  */
 &nbsp;
 marked.options =
-marked.setOptions = <span class="fstat-no" title="function not covered" >function(opt) {</span>
-<span class="cstat-no" title="statement not covered" >  merge(marked.defaults, opt);</span>
-<span class="cstat-no" title="statement not covered" >  return marked;</span>
+marked.setOptions = <span class="fstat-no" title="function not covered">function(opt) {</span>
+<span class="cstat-no" title="statement not covered">  merge(marked.defaults, opt);</span>
+<span class="cstat-no" title="statement not covered">  return marked;</span>
 };
 &nbsp;
 marked.defaults = {
@@ -4063,23 +4061,24 @@ marked.inlineLexer = InlineLexer.output;
 &nbsp;
 marked.parse = marked;
 &nbsp;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; typeof exports === 'object') {
+<span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; typeof exports === 'object') {
   module.exports = marked;
-} else <span class="cstat-no" title="statement not covered" >if (typeof define === 'function' &amp;&amp; define.amd) {</span>
-<span class="cstat-no" title="statement not covered" >  define(<span class="fstat-no" title="function not covered" >function() {</span> <span class="cstat-no" title="statement not covered" >return marked; </span>});</span>
+} else <span class="cstat-no" title="statement not covered">if (typeof define === 'function' &amp;&amp; define.amd) {</span>
+<span class="cstat-no" title="statement not covered">  define(<span class="fstat-no" title="function not covered">function() {</span> <span class="cstat-no" title="statement not covered">return marked; </span>});</span>
 } else {
-<span class="cstat-no" title="statement not covered" >  this.marked = marked;</span>
+<span class="cstat-no" title="statement not covered">  this.marked = marked;</span>
 }
 &nbsp;
 }).call(function() {
-  return this || (<span class="branch-1 cbranch-no" title="branch not covered" >typeof window !== 'undefined' ? window : global)</span>;
+  return this || (<span class="branch-1 cbranch-no" title="branch not covered">typeof window !== 'undefined' ? window : global)</span>;
 }());
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:10:48 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 19:52:42 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
